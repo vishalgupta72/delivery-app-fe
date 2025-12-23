@@ -4,9 +4,20 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainRoutes from './MainRoutes';
 import LoginRoutes from './AuthenticationRoutes';
 
+// project imports (lazy load if preferred, but direct import is fine for this simple page)
+import Loadable from 'ui-component/Loadable';
+import { lazy } from 'react';
+
+const RootMessage = Loadable(lazy(() => import('views/pages/RootMessage')));
+
 // ==============================|| ROUTING RENDER ||============================== //
-const router = createBrowserRouter([LoginRoutes , MainRoutes], {
-  basename: import.meta.env.VITE_APP_BASE_NAME
-});
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootMessage />
+  },
+  LoginRoutes,
+  MainRoutes
+]);
 
 export default router;

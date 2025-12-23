@@ -9,7 +9,7 @@ import { APP_PREFIX_PATH } from './src/config/constant.js';
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
   // https://github.com/jpuri/react-draft-wysiwyg/issues/1317
-  base: APP_PREFIX_PATH + '/',
+  base: '/',
   define: {
     global: 'window'
   },
