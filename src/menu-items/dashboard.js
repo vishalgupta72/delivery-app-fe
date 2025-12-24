@@ -94,6 +94,13 @@ const fullMenuItems = {
             icon: icons.IconDashboard
         },
         {
+            id: 'inventory',
+            title: 'Inventory',
+            type: 'item',
+            url: APP_PREFIX_PATH + '/inventory',
+            icon: icons.IconBox
+        },
+        {
             id: 'manage-customer',
             title: 'Manage Users',
             type: 'collapse',

@@ -14,6 +14,7 @@ import ManageProduct from 'views/pages/ManageProduct';
 
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 const CustomerList = Loadable(lazy(() => import('views/pages/CustomerList')));
+const Inventory = Loadable(lazy(() => import('views/inventory/Inventory')));
 
 const MainRoutes = {
     path: APP_PREFIX_PATH + '/',
@@ -33,6 +34,10 @@ const MainRoutes = {
                 {
                     path: APP_PREFIX_PATH + '/customer_list',
                     element: <CustomerList />
+                },
+                {
+                    path: APP_PREFIX_PATH + '/inventory',
+                    element: <Inventory />
                 },
                 {
                     path: APP_PREFIX_PATH + '/manage_users',
